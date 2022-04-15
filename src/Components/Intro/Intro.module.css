@@ -1,0 +1,236 @@
+.text_1 {
+  animation: text1;
+}
+
+.text_2 {
+  animation: text2;
+}
+
+.text_1,
+.text_2 {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-duration: 13s;
+  animation-timing-function: steps(30, 50);
+  animation-iteration-count: infinite;
+
+  background: #5433ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #5433ff,
+    #20bdff,
+    #9affc6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #5433ff,
+    #20bdff,
+    #9affc6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-family: "Fira Code";
+  font-size: 2.3rem;
+}
+
+.text_1::after,
+.text_2::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
+
+@keyframes text2 {
+  0%,
+  50%,
+  100% {
+    width: 0;
+  }
+
+  60%,
+  90% {
+    width: 12em;
+  }
+}
+
+@keyframes text1 {
+  0%,
+  50%,
+  100% {
+    width: 0;
+  }
+  10%,
+  40% {
+    width: 10.5em;
+  }
+}
+
+@keyframes caret {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.parentContainer {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: url("../../assets/dot-grid.png");
+}
+
+.imageContainer {
+  height: 280px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.greetingsContainer {
+  position: absolute;
+  left: 10rem;
+  bottom: 15rem;
+}
+.hello {
+  margin-bottom: 0;
+  text-align: start;
+  font-size: 3.4rem;
+  font-family: "Titillium Web";
+  line-height: 3rem;
+}
+.name {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: start;
+  font-size: 3.4rem;
+  font-family: "Titillium Web";
+}
+.tapered {
+  background-image: linear-gradient(
+    179deg,
+    #fde400 0%,
+    #ff7b00 50%,
+    transparent 54%,
+    transparent 100%
+  );
+  background-size: 100% 15%;
+  background-repeat: repeat-x;
+  background-position: left 0% bottom 10%;
+}
+
+@media (min-width: 360px) and (max-width: 544px) {
+  .parentContainer {
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+
+  .imageContainer {
+    height: 175px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .greetingsContainer {
+    position: absolute;
+    left: 1rem;
+    top: 10%;
+  }
+
+  .hello {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+  .name {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  .text_1,
+  .text_2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 545px) and (max-width: 767px) {
+  .parentContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+
+  .imageContainer {
+    height: 180px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .greetingsContainer {
+    position: absolute;
+    left: 5rem;
+    top: 25%;
+  }
+
+  .hello {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .name {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .text_1,
+  .text_2 {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .parentContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .imageContainer {
+    height: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .greetingsContainer {
+    position: absolute;
+    left: 10rem;
+    top: 25%;
+  }
+
+  .hello {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .name {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .text_1,
+  .text_2 {
+    font-size: 2.5rem;
+  }
+}

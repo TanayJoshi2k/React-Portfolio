@@ -1,0 +1,74 @@
+body {
+  width: 100vw;
+  background-color: #0a0a0a;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+.parentDiv {
+  margin: 2.5% auto;
+  justify-content: center;
+  display: flex;
+  width: 70vw;
+}
+
+.rowOne {
+  background-color: #121212;
+  width: 100%;
+  display: flex;  
+  justify-content: space-evenly;
+}
+.rowOne > div > img {
+  height: 200px;
+}
+img:hover {
+  filter: grayscale(100%);
+}
+
+.expContainer {
+  width: 80vw;
+  margin: 5% auto;
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.jpmcContainer {
+  width: 90%;
+  background: #161616;
+  display: flex;
+}
+
+/* /* @media (min-width:280px) and (max-width: 359px) */
+
+@media (min-width: 360px) and (max-width: 544px) {
+  body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
+  }
+}
+
+/* @media (min-width: 544px)
+
+@media (min-width: 768px)
+
+@media (min-width: 992px)
+
+@media (min-width: 1200px)  */
+
+/* .skillsContainer {
+  background-color: #1a1b1d;
+  background-image: url("../src/assets/background.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  color:#ffefca;
+  height: 35vh;
+  margin-bottom: 5%;
+  border:1px solid red
+
+} */
+@media (min-width: 360px) and (max-width: 544px) {
+}

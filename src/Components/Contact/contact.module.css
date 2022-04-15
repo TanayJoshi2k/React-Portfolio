@@ -1,0 +1,121 @@
+.contactMe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Fira Code';
+  letter-spacing: 1.5px;
+  background: #657ED4;
+}
+.container {
+  width: 30%;
+  height: auto;
+  background: transparent;
+  padding: 1.5rem;
+  color: #3626A7;
+}
+
+.heading {
+  font-size: 2rem;
+  text-align: start;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.form {
+  height: 100%;
+}
+label {
+  display: block;
+  margin-top: 1rem;
+  font-family: sans-serif;
+  letter-spacing: 0.8px;
+}
+textarea {
+  resize: none;
+  height: 150px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 2px;
+  background: #c7d4ff;
+  margin-top: 0.4rem;
+  color: #657ED4;
+  font-size: 1.1rem;
+  letter-spacing: 0.8px;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  background: #c7d4ff;
+  border: none;
+  border-radius: 2px;
+  padding: 0.5rem;
+  margin-top: 0.4rem;
+  color: #657ED4;
+  font-size: 1.1rem;
+  letter-spacing: 0.8px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid #ffd301;
+}
+
+form button {
+  display: block;
+  margin: 1rem auto;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background: #3626A7;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  color: #fbfff5;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 50%;
+    height: auto;
+    background: #1b1b1b;
+    padding: 1.5rem;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
+}
+
+@media (min-width: 360px) and (max-width: 544px) {
+  .container {
+    width: 75%;
+    height: auto;
+    background: #1b1b1b;
+    padding: 1.5rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  form button {
+    margin: 1rem auto;
+    margin-bottom: 0;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+
+  }
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
