@@ -1,0 +1,137 @@
+.educationContainer {
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.educationContainer_dark {
+  background: #283449;
+}
+
+.educationContainer_light {
+  background: #ecebe4;
+}
+
+.edTitle {
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Titillium Web";
+  font-weight: 100;
+  letter-spacing: 1.5px;
+}
+
+.edTitle_dark {
+  color: #33D69A;
+}
+
+.edTitle_light {
+  color: #1c1c1c
+}
+
+.BE {
+  width: 95%;
+  align-self: center;
+  display: flex;
+  border-radius: 1rem;
+  margin: 0 auto;
+  margin-bottom: 4%;
+}
+
+.BE_dark {
+  background: #202837;
+}
+
+.BE_light {
+  background: #DADDD8;
+}
+
+.BEImage {
+  padding: 1rem;
+  display: flex;
+}
+
+.BEImage>img {
+  height: 100px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+
+.clgContainer {
+  width: auto;
+  height: 100%;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.clgContainer_dark {
+  color: #fbfbff;
+}
+
+.clgContainer_light {
+  color: #1C1C1C;
+}
+
+.clgName {
+  font-size: 1.4rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.degree {
+  font-size: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.marks {
+  font-size: 0.9rem;
+  font-family: "Fira Code";
+}
+
+.marks_dark {
+  color: #33D69A;
+}
+
+.marks_light {
+  color: #EF649E;
+}
+
+@media (min-width: 360px) and (max-width: 544px) {
+  .edTitle {
+    margin: 1rem auto;
+    font-size: 2.5rem;
+  }
+
+  .BE {
+    display: block;
+  }
+
+  .BEImage {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .clgName {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .degree {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .marks {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}

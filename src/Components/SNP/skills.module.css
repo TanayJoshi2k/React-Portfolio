@@ -1,0 +1,44 @@
+.skillsContainer {
+  overflow: auto;
+}
+
+.skillsContainer_dark {
+  overflow: auto;
+  background: #202837;
+}
+
+.skillsContainer_light {
+  overflow: auto;
+  background: #daddd8;
+
+}
+
+.skillsTitle {
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Titillium Web";
+  font-weight: 100;
+  letter-spacing: 1.5px;
+}
+
+.skillsTitle_dark {
+  color: #33D69A;
+}
+
+.skillsTitle_light {
+  color: #1c1c1c;
+}
+
+.marqueeContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+}
+
+.marqueeContainer>div {
+  margin-left: 2.5em;
+  margin-right: 2.5rem;
+}
