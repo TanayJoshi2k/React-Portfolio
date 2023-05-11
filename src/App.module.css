@@ -12,6 +12,14 @@ html, body {
   overflow-x: hidden;
 }
 
+:root {
+  --primary-light-background: #ffffff;
+  --secondary-light-background: #f0f9ff;
+
+  --primary-dark-background:#202837;
+  --seconday-da-background:#283449;
+}
+
 /* width */
     ::-webkit-scrollbar {
        width: 5px;

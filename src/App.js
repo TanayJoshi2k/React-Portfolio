@@ -1,8 +1,7 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import classes from "./App.module.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
-import ScrollUp from "./Components/ScrollUp/ScrollUp";
 
 import { createContext } from "react";
 
@@ -14,6 +13,7 @@ const App = () => {
   const toggleTheme = () => {
     setTheme((theme) => (theme === "dark" ? "light" : "dark"));
   };
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div>

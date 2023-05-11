@@ -3,14 +3,16 @@
   max-width: 100%;
   display: flex;
   flex-direction: column;
+
 }
 
 .educationContainer_dark {
   background: #283449;
 }
 
-.educationContainer_light {
-  background: #ecebe4;
+.educationContainer_light {  
+  background: var(--secondary-light-background);
+
 }
 
 .edTitle {
@@ -40,24 +42,31 @@
 }
 
 .BE_dark {
-  background: #202837;
+  background: var(--primary-dark-background);
 }
 
 .BE_light {
-  background: #DADDD8;
+  background: var(--primary-light-background);
+  border-bottom: 2px solid #3b82f6;
+  border-left: 2px solid #3b82f6;
 }
 
-.BEImage {
+.BEImage, .collegeImage {
   padding: 1rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .BEImage>img {
   height: 100px;
   width: 100px;
-  align-items: center;
-  justify-content: center;
   border-radius: 0.5rem;
+}
+
+.collegeImage > img{
+  width: 100px;
+  aspect-ratio: 1.03;
 }
 
 .clgContainer {
@@ -69,6 +78,7 @@
 
 .clgContainer_dark {
   color: #fbfbff;
+  
 }
 
 .clgContainer_light {
@@ -97,7 +107,7 @@
 }
 
 .marks_light {
-  color: #EF649E;
+  color: #3b82f6;
 }
 
 @media (min-width: 360px) and (max-width: 544px) {
@@ -133,5 +143,60 @@
   .marks {
     font-size: 0.9rem;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .educationContainer {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .edTitle {
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Titillium Web";
+    font-weight: 100;
+    letter-spacing: 1.5px;
+  }
+  
+  .BE {
+    width: 95%;
+    align-self: center;
+    display: flex;
+    border-radius: 1rem;
+    margin: 0 auto;
+    margin-bottom: 4%;
+  }
+  
+  .BEImage {
+    padding: 1rem;
+    display: flex;
+  }
+  
+  .BEImage>img {
+    height: 100px;
+    width: 100px;
+    border-radius: 0.5rem;
+  }
+  
+  .clgContainer {
+    width: auto;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .listContainer {
+    width: 90vw;
+    display: block;
+    margin: 0 auto;
   }
 }

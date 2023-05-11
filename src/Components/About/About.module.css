@@ -3,14 +3,17 @@
   width: 100vw;
   height: auto;
   margin-top: 0;
+  text-align: center;
+  text-transform: uppercase;
 }
+
 
 .aboutContainer_dark {
   background: #283449;
 }
 
 .aboutContainer_light {
-  background: #ECEBE4;
+  background: var(--secondary-light-background);
 }
 
 .aboutContainer>.svg {
@@ -22,8 +25,8 @@
   display: block;
   border-radius: 100%;
   margin: 2rem auto;
-  height: 250px;
-  width: 250px;
+  width: 220px;
+  aspect-ratio: 0.89;
 }
 
 .aboutMe {
@@ -34,7 +37,7 @@
 }
 
 .aboutMe_dark {
-  color: #ffffff;
+  color: #657ED4;
 }
 
 .aboutMe_light {
@@ -42,22 +45,22 @@
 }
 
 .aboutpara>p {
-  font-size: 2.25rem;
-  font-family:"Titillium Web";
+  font-size: 1.5rem;
+  font-family: "Titillium Web";
   margin: 2rem;
-  letter-spacing: 0.1px;
+  letter-spacing: 2px;
 }
 
 .aboutpara>p:last-child {
-  padding-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
-.aboutpara_dark > p {
-  color: #657ED4;
+.aboutpara_dark>p {
+  color: #ffffff;
 }
 
-.aboutpara_light > p {
-  color: #1C1C1C;
+.aboutpara_light>p {
+  color: #3b82f6;
 }
 
 @media (min-width: 360px) and (max-width: 544px) {
@@ -72,17 +75,18 @@
     display: block;
     border-radius: 100%;
     margin: 2rem auto;
-    height: 200px;
-    width: 200px;
+    width: 160px;
+    aspect-ratio: 0.89;
   }
 
   .aboutpara>p {
     font-size: 1.5rem;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-family: "Titillium Web";
     padding: 1rem;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0rem;
+    text-align: left;
   }
+
 }
 
 @media (min-width: 545px) and (max-width: 767px) {
@@ -96,8 +100,9 @@
     display: block;
     border-radius: 100%;
     margin: 2rem auto;
-    height: 250px;
-    width: 250px;
+    width: 170px;
+    aspect-ratio: 0.89;
+
   }
 
   .aboutpara>p {
@@ -118,15 +123,17 @@
   .aboutContainer>img {
     display: block;
     border-radius: 100%;
-    margin: 4rem auto;
-    height: 250px;
-    width: 250px;
+    margin: 2rem auto;
+    width: 180px;
+    aspect-ratio: 0.89;
+
   }
 
   .aboutpara>p {
-    font-size: 1.9rem;
+    font-size: 1.75rem;
     padding: 1rem;
     margin-top: 0;
     margin-bottom: 0;
   }
+
 }

@@ -13,15 +13,26 @@
 }
 
 .parentContainer_light {
-  background: #DADDD8;
+  background: #ffffff;
 }
 
+.introBkgImg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+  -webkit-mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.4), rgb(0 0 0 / 0));
+  mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.4), rgb(0 0 0 / 0));
+}
 
 .hello {
   margin: 0 auto;
   font-size: 4rem;
   font-family: "Titillium Web";
   line-height: 3rem;
+  z-index: 999;
 }
 
 .hello_dark {
@@ -29,13 +40,14 @@
 }
 
 .hello_light {
-  color: #403D39;
+  color: #fff;
 }
 
 .name {
   margin: 0 auto;
   font-size: 4.5rem;
   font-family: "Titillium Web";
+  z-index: 999;
 }
 
 .name_dark {
@@ -43,7 +55,7 @@
 }
 
 .name_light {
-  color: #1C1C1C;
+  color: rgb(79 70 229);
 }
 
 .resume_btn {
@@ -51,20 +63,21 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  isolation: isolate;
+  z-index: 999;
 }
 
 .resume_btn_dark {
   background: #33d69a;
-  color: #000;
 }
 
 .resume_btn_light {
-  background: #403D39;
-  color: #000;
+  background: #3B82F6;
+  color: #fff;
 }
 
 .resume_btn>a {
-  color: #ffffff
+  color: #000;
 }
 
 .resume_btn>a,
@@ -80,7 +93,17 @@
 
 @media (min-width: 360px) and (max-width: 544px) {
   /* .hello and .name are inheriting font-size of 4 and 4.5rem resp */
-
+  .introBkgImg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.4), rgb(0 0 0 / 0));
+    mask-image: linear-gradient(rgb(0 0 0 / 1), rgb(0 0 0 / 0.4), rgb(0 0 0 / 0));
+  }
   .resume_btn {
     padding: 0.6rem 1rem;
     font-size: 1.2rem;
@@ -89,11 +112,23 @@
 
 @media (min-width: 545px) and (max-width: 767px) {
 
-  /* .hello and .name are inheriting all properties */
+  .hello {
+    font-size: 4.5rem;
+  }
+
+  .name {
+    font-size: 5rem;
+  }
 
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .introBkgImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 
   .hello {
     font-size: 5rem;

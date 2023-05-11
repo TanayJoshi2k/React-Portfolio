@@ -9,8 +9,7 @@
 
 .skillsContainer_light {
   overflow: auto;
-  background: #daddd8;
-
+  background: var(--primary-light-background)
 }
 
 .skillsTitle {
@@ -30,15 +29,135 @@
   color: #1c1c1c;
 }
 
-.marqueeContainer {
+.skills {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
 }
 
-.marqueeContainer>div {
-  margin-left: 2.5em;
-  margin-right: 2.5rem;
+.skill {
+  width: max-content;
+  height: max-content;
+  padding: 0.2rem 0.5rem;
+  margin: 0.5rem 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.skill_light {
+  background-color: var(--secondary-light-background);
+  border: 2px solid #3B82F6;
+  color: #3B82F6;
+}
+
+.skill_dark {
+  border: 2px solid #33D69A;
+  color: #33D69A;
+  background-color: #283449;
+}
+
+.skill img {
+  width: 20px;
+  margin-right: 0.5rem;
+}
+
+.skill p {
+  margin-left: 15px;
+  display: block;
+  margin: 0 0 0 0;
+}
+
+@media (min-width: 360px) and (max-width: 544px) {
+
+
+  .skills {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-items: start;
+    /* adjusted */
+  }
+
+  .skill {
+    width: 9rem;
+    height: max-content;
+    padding: 0.2rem 0.5rem;
+    margin: 0.5rem 0.6rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+}
+
+@media (min-width: 545px) and (max-width: 767px) {
+  .skills {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .skill {
+    width: max-content;
+    height: max-content;
+    padding: 0.4rem 0.8rem;
+    margin: 0.3rem 0.4rem;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.25rem;
+  }
+
+
+  .skill img {
+    width: 25px;
+    margin-right: 0.5rem;
+  }
+
+  .skill p {
+    margin-left: 15px;
+    display: block;
+    margin: 0 0 0 0;
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .skills {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .skill {
+    width: 10rem;
+    height: max-content;
+    padding: 0.4rem 0.8rem;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.25rem;
+  }
+
+
+  .skill img {
+    width: 30px;
+    margin-right: 0.5rem;
+  }
+
+  .skill p {
+    margin-left: 15px;
+    display: block;
+    margin: 0 0 0 0;
+  }
+
 }

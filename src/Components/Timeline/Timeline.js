@@ -8,7 +8,7 @@ const Timeline = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <div
+    <div id="experience"
       className={[
         classes.experienceContainer,
         theme === "dark"

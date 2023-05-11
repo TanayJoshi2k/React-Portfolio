@@ -44,8 +44,6 @@ const Contact = () => {
     validate,
   });
 
-  console.log(formik.errors);
-
   return (
     <div
       className={[
@@ -74,7 +72,7 @@ const Contact = () => {
               xmlns="http://www.w3.org/2000/svg"
               width="32"
               height="32"
-              fill={theme === "dark" ? "#ffffff" : "#1c1c1c"}
+              fill={theme === "dark" ? "#ffffff" : "#3B82F6"}
               className="bi bi-pin-map-fill"
               viewBox="0 0 16 16"
             >
@@ -96,7 +94,7 @@ const Contact = () => {
               xmlns="http://www.w3.org/2000/svg"
               width="32"
               height="32"
-              fill={theme === "dark" ? "#ffffff" : "#1c1c1c"}
+              fill={theme === "dark" ? "#ffffff" : "#3B82F6"}
               className="bi bi-mailbox"
               viewBox="0 0 16 16"
             >
@@ -111,7 +109,7 @@ const Contact = () => {
               xmlns="http://www.w3.org/2000/svg"
               width="32"
               height="32"
-              fill={theme === "dark" ? "#ffffff" : "#1c1c1c"}
+              fill={theme === "dark" ? "#ffffff" : "#3B82F6"}
               className="bi bi-pin-map-fill"
               viewBox="0 0 16 16"
             >
@@ -152,8 +150,9 @@ const Contact = () => {
               method="POST"
             >
               <div>
-                <label>Name</label>
+                <label htmlFor="name">Name</label>
                 <input
+                  id="name"
                   className={[
                     classes.formInput,
                     theme === "dark"
@@ -174,8 +173,9 @@ const Contact = () => {
               </div>
 
               <div>
-                <label>Email</label>
+                <label htmlFor="email">Email</label>
                 <input
+                  id="email"
                   className={[
                     classes.formInput,
                     theme === "dark"
@@ -196,8 +196,9 @@ const Contact = () => {
               </div>
 
               <div>
-                <label>Message</label>
+                <label htmlFor="message">Message</label>
                 <textarea
+                  id="message"
                   className={[
                     classes.textarea,
                     theme === "dark"

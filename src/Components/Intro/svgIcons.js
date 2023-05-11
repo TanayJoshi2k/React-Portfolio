@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../App";
 
 const SVGICONS = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <div
       style={{
@@ -18,7 +20,7 @@ const SVGICONS = () => {
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
-            fill="white"
+            fill={theme === "dark" ? "white" : "steelblue"}
             className="bi bi-github"
             viewBox="0 0 16 16"
           >
@@ -33,7 +35,7 @@ const SVGICONS = () => {
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
-            fill="white"
+            fill={theme === "dark" ? "white" : "steelblue"}
             className="bi bi-linkedin"
             viewBox="0 0 16 16"
           >

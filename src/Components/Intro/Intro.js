@@ -12,13 +12,14 @@ import pdf from "../../assets/Tanay_Joshi_Resume.pdf";
 
 // Import Libraries
 import { motion } from "framer-motion";
-
 import { ThemeContext } from "../../App";
+import introBackgroundImg from "../../assets/intro_background.webp";
 
 function Intro() {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <div>
+      <img className={classes.introBkgImg} src={introBackgroundImg} alt="..."/>
       <motion.div
         className={[
           classes.parentContainer,

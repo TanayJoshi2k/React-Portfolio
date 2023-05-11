@@ -23,7 +23,7 @@
 
 .metadata_light,
 .contactMeForm_light {
-  background: #ecebe4;
+  background: var(--secondary-light-background);
 }
 
 .metadata>.container {
@@ -56,7 +56,7 @@
 }
 
 .container_light {
-  color: #EF73A5;
+  color: #3B82F6;
 }
 
 .container_dark>p {
@@ -83,7 +83,7 @@
 }
 
 .container_light>div>p:nth-child(1n) {
-  color: #1c1c1c;
+  color: black;
 }
 
 .container>div>p:nth-child(2n) {
@@ -93,10 +93,14 @@
 
 .container_dark>div>p:nth-child(2n) {
   color: #33d69a;
+  font-weight: 600;
+
 }
 
 .container_light>div>p:nth-child(2n) {
-  color: #EF73A5;
+  color: #3B82F6;
+  font-weight: 600;
+
 }
 
 .heading {
@@ -148,7 +152,8 @@ textarea {
 }
 
 .textarea_light {
-  background: #daddd8;
+  background: var(--primary-light-background);
+  border: 2px solid #3B82F6;
   color: #1c1c1c;
 }
 
@@ -169,7 +174,8 @@ textarea {
 }
 
 .formInput_light {
-  background: #daddd8;
+  background: var(--primary-light-background);
+  border: 2px solid #3B82F6;
   color: #1c1c1c;
 }
 
@@ -199,7 +205,7 @@ textarea:focus {
   margin-bottom: 0;
   text-transform: uppercase;
   letter-spacing: 4px;
-  background: #403d39;
+  background: #3B82F6;
   border: none;
   padding: 1rem 2.5rem;
   font-size: 1.2rem;
@@ -210,7 +216,7 @@ textarea:focus {
 
 .button_light:disabled {
   cursor: not-allowed;
-  background-color: rgba(64, 61, 57, 0.7);
+  background-color: #649bf3;
 }
 
 .button_dark:disabled {
@@ -222,11 +228,6 @@ svg {
   display: block;
 }
 
-@media screen and (min-width: 1024px) {
-  .contactMeForm {
-    max-width: 40%;
-  }
-}
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .parentContainer {
@@ -397,3 +398,5 @@ svg {
     font-size: 1.2rem;
   }
 }
+
+@media (min-width: 1400px) {}

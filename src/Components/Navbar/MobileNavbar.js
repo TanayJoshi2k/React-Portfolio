@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../App";
 import { motion } from "framer-motion";
-import NavItems from "./NavItems";
+import NavItems from "./NavItem";
 import classes from "./MobileNavbar.module.css";
 
 function MobileNavbar() {

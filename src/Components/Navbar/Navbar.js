@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { ThemeContext } from "../../App";
 import { motion } from "framer-motion";
 import MobileNavbar from "./MobileNavbar";
-import NavItems from "./NavItems";
+import NavItems from "./NavItem";
 import classes from "./Navbar.module.css";
 
 const Navbar = () => {

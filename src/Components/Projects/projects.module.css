@@ -1,15 +1,12 @@
-.projects {
-  overflow: auto;
-}
-
 .projects_dark {
-  overflow: auto;
+  overflow: hidden;
   background-color: #202837;
 }
 
 .projects_light {
-  overflow: auto;
-  background-color: #daddd8;
+  overflow: hidden;
+  background: var(--primary-light-background)
+
 }
 
 .projectsTitle {
@@ -33,6 +30,10 @@
   display: grid;
   grid-template-columns: auto auto auto;
   width: 100%;
+}
+
+.project p {
+  text-align: justify;
 }
 
 .link {
@@ -72,7 +73,8 @@
 
 .project_light {
   color: #1c1c1c;
-  background: #ecebe4;
+  background: var(--secondary-light-background);
+  border: 2px solid #3B82F6;
 }
 
 .project_dark>a {
@@ -85,7 +87,7 @@
 .project_light>a {
   font-size: 1.5rem;
   text-align: center;
-  color: #ef73a5;
+  color: #3B82F6;
   text-decoration: none;
 }
 
@@ -141,8 +143,8 @@
 }
 
 .techStack_light>div {
-  background: #daddd8;
-  color: #1c1c1c;
+  background: #3B82F6;
+  color: #ffffff;
 }
 
 .techStack_light>div:hover {
@@ -222,6 +224,7 @@
   .project {
     width: auto;
     margin-bottom: 1.5rem;
+    padding: 1rem;
   }
 
   .skills {
@@ -238,7 +241,7 @@
   }
 
   .techStack>div {
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding: 0.3rem;
     margin: 0.2rem;
     letter-spacing: 0.5px;
@@ -247,5 +250,30 @@
   .techStack>div:hover {
     color: #0d0106;
     background: #33d69a;
+  }
+}
+
+@media (min-width: 1025px) {
+  .projectsContainer {
+    width: 100vw;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+
+  .project {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .projectsContainer {
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+
+  .project {
+    padding: 1rem;
   }
 }

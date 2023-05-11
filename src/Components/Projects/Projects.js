@@ -5,7 +5,7 @@ const Projects = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <div
+    <div id="projects"
       className={[
         classes.projects,
         theme === "dark" ? classes.projects_dark : classes.projects_light,

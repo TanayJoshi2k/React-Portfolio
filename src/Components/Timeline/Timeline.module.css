@@ -10,12 +10,12 @@ body {
 }
 
 .experienceContainer_dark {
-  background: #202837;
+  background: var(--primary-dark-background);
+  
 }
 
 .experienceContainer_light {
-  background: #daddd8;
-
+  background: var(--primary-light-background);
 }
 
 .cdContainer {
@@ -71,7 +71,7 @@ Main components
   left: 25px;
   height: 100%;
   width: 4px;
-  background: #f2f2f2;
+  background: rgba(59, 130, 246, 0.4);
   /* fallback for old browsers */
 }
 
@@ -135,8 +135,8 @@ Main components
 }
 
 .cdTimelineImg_light {
-  background: #ECEBE4;
-  box-shadow: 0 0 0 2px #EF649E;
+  background: var(--secondary-light-background);
+  box-shadow: 0 0 0 2px #3b82f6;
 
 }
 
@@ -159,6 +159,9 @@ Main components
   margin-right: 30px;
   border-radius: 2px;
   padding: 1em;
+  border: 2px solid #3b82f6;
+
+
 }
 
 .cdTimelineContent_dark {
@@ -166,7 +169,7 @@ Main components
 }
 
 .cdTimelineContent_light {
-  background: #ecebe4;
+  background: var(--secondary-light-background);
 }
 
 .contentSkills {
@@ -190,12 +193,12 @@ Main components
 }
 
 .timelineContentInfo {
-  background: #f2f2f2;
+  background: var(--primary-light-background);
   padding: 0.5rem;
   color: black;
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid;
+  border: 1px solid #3b82f6;
   border-radius: 2px;
   font-family: 'Titillium Web';
 }
@@ -242,7 +245,7 @@ Main components
 }
 
 .jobTitle_light {
-  color: #EF649E;
+  color: #3b82f6;
 }
 
 .jobDescription {
@@ -275,7 +278,7 @@ Main components
   height: 0;
   width: 0;
   border: 7px solid transparent;
-  border-right: 7px solid #333c42;
+  border-right: 7px solid #3b82f6;
 }
 
 @media only screen and (min-width: 768px) {
@@ -323,7 +326,7 @@ Main components
     top: 24px;
     left: 100%;
     border-color: transparent;
-    border-left-color: #333c42;
+    border-left-color: #3b82f6;
   }
 
   .cdTimelineContent .cdDate {
@@ -344,7 +347,7 @@ Main components
     left: auto;
     right: 100%;
     border-color: transparent;
-    border-right-color: #333c42;
+    border-right-color: #3b82f6;
   }
 
   .cdTimelineBlock:nth-child(even) .cdTimelineContent .cd-read-more {
@@ -357,3 +360,5 @@ Main components
     text-align: right;
   }
 }
+
+

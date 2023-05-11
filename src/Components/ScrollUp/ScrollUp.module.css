@@ -6,13 +6,11 @@
   padding: 0.5rem;
   border: none;
   border-radius: 15px;
-  background: #EF73A5;
-  -webkit-box-shadow: 1px 1px 24px -5px rgb(255, 76, 124);
--moz-box-shadow: 1px 1px 24px -5px rgb(255, 76, 124);
-box-shadow: 1px 1px 24px -5px rgb(255, 76, 124);
+  background: #3B82F6;
   cursor: pointer;
 }
 
 .scrollUp span {
   font-size: 2rem;
+  color: white;
 }
