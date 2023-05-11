@@ -1,5 +1,8 @@
 import React, { useState, useContext } from "react";
 import { ThemeContext } from "../../App";
+import { motion } from "framer-motion";
+import MobileNavbar from "./MobileNavbar";
+import NavItems from "./NavItems";
 import classes from "./Navbar.module.css";
 
 const Navbar = () => {
@@ -9,6 +12,17 @@ const Navbar = () => {
     setShowNav(!showNav);
   };
   const { theme, toggleTheme } = useContext(ThemeContext);
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.25,
+        staggerChildren: 0.15,
+      },
+    },
+  };
 
   return (
     <header>
@@ -34,48 +48,43 @@ const Navbar = () => {
             >
               ☰
             </span>
-            
           )}
         </button>
-        <ul className={showNav ? classes.showNav : classes.hideNav}>
-          <div
-            className={[
-              classes.liContainer,
-              theme === "dark"
-                ? classes.liContainer_dark
-                : classes.liContainer_light,
-            ].join(" ")}
+        {!showNav ? (
+          <motion.ul
+            variants={container}
+            initial="hidden"
+            animate="show"
+            className={classes.hideNav}
           >
-            <li>
-              <a href="/">Tanay Joshi</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#education">Exp & Education</a>
-            </li>
-            <li>
-              <a href="#snp">Skills & Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-            <li onClick={toggleTheme}>
-              {theme === "dark" ? (
-                <span className="material-symbols-outlined">dark_mode</span>
-              ) : (
-                <span className="material-symbols-outlined">light_mode</span>
-              )}
-            </li>
-          </div>
-          <div className={showNav ? classes.showHr : classes.hideHr}>
-            <hr className={classes.hr} />
-            <div className={classes.logo}>
-              <a href="/">Tanay Joshi</a>
+            <div
+              className={[
+                classes.liContainer,
+                theme === "dark"
+                  ? classes.liContainer_dark
+                  : classes.liContainer_light,
+              ].join(" ")}
+            >
+              <NavItems />
+
+              <li onClick={toggleTheme}>
+                {theme === "dark" ? (
+                  <span className="material-symbols-outlined">dark_mode</span>
+                ) : (
+                  <span className="material-symbols-outlined">light_mode</span>
+                )}
+              </li>
             </div>
-          </div>
-        </ul>
+            <div className={classes.hideHr}>
+              <hr className={classes.hr} />
+              <div className={classes.logo}>
+                <a href="/">Tanay Joshi</a>
+              </div>
+            </div>
+          </motion.ul>
+        ) : (
+          <MobileNavbar />
+        )}
       </nav>
     </header>
   );
